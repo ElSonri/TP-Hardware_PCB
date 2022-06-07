@@ -1,0 +1,72 @@
+(Japanese_coding: sjis)
+(function "ECS_221759"
+    (uver 1)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (ctime 2015-07-12-18:13:02)
+    (utime 2017-01-18-12:48:41)
+    (interface
+        (port "1" (symbPinId 1) (portType INPUT))
+        (port "3" (symbPinId 2) (portType OUTPUT))
+        (port "4" (symbPinId 3) (portType GROUND))
+    )
+    (property "symbolName" "KF33BDT-TR")
+)
+
+
+(pinAssign "ECS_221759"
+    (uver 1)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (ctime 2015-07-12-18:13:02)
+    (utime 2017-01-18-12:48:41)
+    (interface
+        (port "1" (symbPinId 1) (portName "INPUT") (portType INPUT))
+        (port "3" (symbPinId 2) (portName "OUTPUT") (portType OUTPUT))
+        (port "4" (symbPinId 3) (portName "GND_TAB") (portType GROUND))
+    )
+    (internal
+        (funcInst (functionRef "ECS_221759")
+                (port "1" (match "1"))
+                (port "3" (match "3"))
+                (port "4" (match "4"))
+        )
+    )
+    (property "usePowerBox" "No")
+    (property "symbolName" "KF33BDT-TR")
+)
+
+
+(part "KF33BDT-TR"
+    (uver 1)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (ctime 2015-07-12-18:13:02)
+    (utime 2017-01-18-12:48:41)
+    (packageRef "KF33BDT-TR")
+    (pinAssignRef "ECS_221759")
+    (interface
+        (port "1" (symbPinId 1) (portName "INPUT") (portType INPUT))
+        (port "3" (symbPinId 2) (portName "OUTPUT") (portType OUTPUT))
+        (port "4" (symbPinId 3) (portName "GND_TAB") (portType GROUND))
+    )
+    (partClass UNDEF)
+    (useInSchema Y)
+    (useInLayout Y)
+    (inPartsList Y)
+    (partType NORMAL)
+    (placeRestriction FREE)
+    (property "enetNonSeries" "YES")
+    (property "refDesPrefix" "IC")
+    (property "description" "LDO Regulator, 3.3V, 0.5A, DPAK KF33BDT-TR, Low Dropout Voltage Regulator, 0.5A, 3.3 V +/-2%, 2.5  20 Vin, 3-Pin DPAK")
+    (property "Manufacturer_Name" "STMicroelectronics")
+    (property "Manufacturer_Part_Number" "KF33BDT-TR")
+    (property "Mouser_Part_Number" "511-KF33BDT-TR")
+    (property "Mouser_Price/Stock" "https://www.mouser.co.uk/ProductDetail/STMicroelectronics/KF33BDT-TR?qs=CDLU63GnlgVFO8GvG6iBTQ%3D%3D")
+    (property "Arrow_Part_Number" "KF33BDT-TR")
+    (property "Arrow_Price/Stock" "https://www.arrow.com/en/products/kf33bdt-tr/stmicroelectronics?region=nac")
+    (property "Datasheet_Link" "http://www.st.com/web/en/resource/technical/document/datasheet/CD00000970.pdf")
+    (property "compAreaTopHeight" 2.4)
+)
+
+
