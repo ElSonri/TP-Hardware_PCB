@@ -1,4 +1,4 @@
-update=17/6/2022 20:13:32
+update=18/6/2022 19:02:25
 version=1
 last_client=kicad
 [general]
@@ -239,7 +239,7 @@ dPairViaGap=0.25
 [pcbnew/Netclasses/1]
 Name=PWR
 Clearance=0.2
-TrackWidth=0.3
+TrackWidth=0.75
 ViaDiameter=0.8
 ViaDrill=0.4
 uViaDiameter=0.3
