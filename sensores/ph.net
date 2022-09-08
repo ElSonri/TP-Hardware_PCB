@@ -1,0 +1,13 @@
+* C:\Users\Gonzalo\Documents\FIUBA\Materias\Trabajo Profesional Ingeniería Electrónica (86.99)\Proyecto\Hardware\TP-Hardware_PCB\sensores\ph.asc
+Vph ph+ ph- PULSE(-0.43 0.43 0 2)
+Vdd 3V3 0 3.3
+XU3 N001 ph- 3V3 0 ph- TLC272
+R3 N001 3V3 50k
+R4 N001 0 10K
+XU4 ph+ Vin- 3V3 0 Vout TLC272
+R7 Vin- 0 10k
+R8 Vout Vin- 10k
+.tran 2
+.inc TLC272.lib
+.backanno
+.end
