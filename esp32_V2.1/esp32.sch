@@ -1,6 +1,5 @@
 EESchema Schematic File Version 4
-LIBS:esp32-cache
-EELAYER 29 0
+EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -286,7 +285,7 @@ Connection ~ 3400 5150
 Wire Wire Line
 	3400 4250 3400 4650
 $Comp
-L DW01A:DW01A U3
+L esp32-rescue:DW01A-DW01A U3
 U 1 1 6294CD9F
 P 2050 6400
 F 0 "U3" H 2050 6800 50  0000 C CNN
@@ -526,7 +525,7 @@ $EndComp
 Wire Notes Line
 	3700 5550 6350 5550
 $Comp
-L 8205A:8205A Q2
+L esp32-rescue:8205A-8205A Q2
 U 1 1 62B9C3B7
 P 2050 7150
 F 0 "Q2" H 2050 6800 50  0000 C CNN
@@ -2180,7 +2179,7 @@ Connection ~ 5150 7100
 Wire Wire Line
 	5150 7100 5050 7100
 $Comp
-L USB_C_Receptacle_2.0:USB_C_Receptacle_2.0 J1
+L esp32-rescue:USB_C_Receptacle_2.0-USB_C_Receptacle_2.0 J1
 U 1 1 63686CC8
 P 1150 1850
 F 0 "J1" H 1150 2750 50  0000 C CNN
@@ -2242,7 +2241,7 @@ Wire Wire Line
 	1050 4700 1250 4700
 Connection ~ 1250 4700
 $Comp
-L KF33BDT-TR:KF33BD-TR IC1
+L esp32-rescue:KF33BD-TR-KF33BDT-TR IC1
 U 1 1 63375022
 P 5000 6600
 F 0 "IC1" H 5000 6965 50  0000 C CNN
