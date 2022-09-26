@@ -1,0 +1,9 @@
+Manufacturer=Espressif Systems
+PartNumber=ESP-WROOM-32D
+PartCategory=Integrated Circuit
+PackageCategory=Other
+PinCount=39
+Version=1.2
+Released=2020-06-08 10:22:05
+Downloaded=2022-05-18 19:38:14
+3D=Y
