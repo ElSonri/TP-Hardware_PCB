@@ -1,4 +1,4 @@
-(module 12402012E212A (layer F.Cu) (tedit 6330D0C0)
+(module 12402012E212A (layer F.Cu) (tedit 63339947)
   (fp_text reference REF** (at 0 -6.35) (layer F.SilkS)
     (effects (font (size 1 1) (thickness 0.15)))
   )
@@ -98,5 +98,5 @@
   (pad A1-B12 smd rect (at -3.200001 -3.6703) (size 0.6096 1.143) (layers F.Cu F.Paste F.Mask))
   (pad 15 smd oval (at -4.42 1.08) (size 1.2 1.8034) (layers B.Cu B.Paste B.Mask))
   (pad 14 smd oval (at 4.42 -3.1) (size 1.2 2.1082) (layers B.Cu B.Paste B.Mask))
-  (pad 16 smd oval (at 4.42 1.08) (size 1.2 1.8034) (layers B.Cu B.Adhes B.Mask))
+  (pad 16 smd oval (at 4.42 1.08) (size 1.2 1.8034) (layers B.Cu B.Paste B.Mask))
 )
