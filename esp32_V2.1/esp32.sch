@@ -1002,9 +1002,9 @@ Wire Wire Line
 Wire Wire Line
 	6900 3950 7000 3950
 Text GLabel 6900 3950 0    50   Input ~ 0
-pH
-Text GLabel 6900 3850 0    50   Input ~ 0
 Bat
+Text GLabel 6900 3850 0    50   Input ~ 0
+Temp
 Wire Wire Line
 	6900 2450 7000 2450
 Wire Wire Line
@@ -1024,7 +1024,7 @@ Text GLabel 6900 2250 0    50   Input ~ 0
 Wire Wire Line
 	6900 4050 7000 4050
 Text GLabel 6900 4050 0    50   Input ~ 0
-Temp
+pH
 Wire Wire Line
 	6900 2150 7000 2150
 Text GLabel 6900 2150 0    50   Input ~ 0
