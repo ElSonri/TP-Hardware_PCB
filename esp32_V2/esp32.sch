@@ -286,7 +286,7 @@ Connection ~ 3400 5150
 Wire Wire Line
 	3400 4250 3400 4650
 $Comp
-L DW01A:DW01A U3
+L esp32-rescue:DW01A-DW01A U3
 U 1 1 6294CD9F
 P 2050 6400
 F 0 "U3" H 2050 6800 50  0000 C CNN
@@ -526,7 +526,7 @@ $EndComp
 Wire Notes Line
 	3700 5550 6350 5550
 $Comp
-L 8205A:8205A Q2
+L esp32-rescue:8205A-8205A Q2
 U 1 1 62B9C3B7
 P 2050 7150
 F 0 "Q2" H 2050 6800 50  0000 C CNN
@@ -589,7 +589,7 @@ Wire Wire Line
 	1650 7150 1650 7200
 Wire Wire Line
 	1200 5900 2950 5900
-Text GLabel 2050 1450 2    50   Input ~ 0
+Text GLabel 2300 1400 2    50   Input ~ 0
 VBUS
 Text GLabel 1850 1850 2    50   Input ~ 0
 D+
@@ -984,12 +984,10 @@ Text GLabel 6900 2750 0    50   Input ~ 0
 Text GLabel 6900 2650 0    50   Input ~ 0
 23
 Wire Wire Line
-	6900 3450 7000 3450
-Wire Wire Line
 	6900 3550 7000 3550
 Text GLabel 6900 3550 0    50   Input ~ 0
 11
-Text GLabel 6900 3450 0    50   Input ~ 0
+Text GLabel 6550 2950 1    50   Input ~ 0
 Vcc
 Wire Wire Line
 	6900 3650 7000 3650
@@ -1004,9 +1002,9 @@ Wire Wire Line
 Wire Wire Line
 	6900 3950 7000 3950
 Text GLabel 6900 3950 0    50   Input ~ 0
-pH
-Text GLabel 6900 3850 0    50   Input ~ 0
 Bat
+Text GLabel 6900 3850 0    50   Input ~ 0
+Temp
 Wire Wire Line
 	6900 2450 7000 2450
 Wire Wire Line
@@ -1026,7 +1024,7 @@ Text GLabel 6900 2250 0    50   Input ~ 0
 Wire Wire Line
 	6900 4050 7000 4050
 Text GLabel 6900 4050 0    50   Input ~ 0
-Temp
+pH
 Wire Wire Line
 	6900 2150 7000 2150
 Text GLabel 6900 2150 0    50   Input ~ 0
@@ -1552,34 +1550,7 @@ Connection ~ 1800 2100
 Wire Wire Line
 	1750 1550 1800 1550
 Wire Wire Line
-	1800 1550 1800 1600
-Wire Wire Line
 	1750 1650 1800 1650
-Wire Wire Line
-	1800 1650 1800 1600
-Connection ~ 1800 1600
-$Comp
-L Device:R_Small R2
-U 1 1 6345FB28
-P 2100 2600
-F 0 "R2" H 2159 2646 50  0000 L CNN
-F 1 "5.1k" H 2159 2555 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 2100 2600 50  0001 C CNN
-F 3 "~" H 2100 2600 50  0001 C CNN
-	1    2100 2600
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R_Small R1
-U 1 1 634F75FE
-P 1800 2600
-F 0 "R1" H 1859 2646 50  0000 L CNN
-F 1 "5.1k" H 1859 2555 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 1800 2600 50  0001 C CNN
-F 3 "~" H 1800 2600 50  0001 C CNN
-	1    1800 2600
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	2100 2700 2100 2800
 Wire Wire Line
@@ -1594,8 +1565,6 @@ Wire Wire Line
 Wire Wire Line
 	2350 2000 2350 1600
 Wire Wire Line
-	1800 1600 1950 1600
-Wire Wire Line
 	1800 2400 1800 2500
 Wire Wire Line
 	1800 2700 1800 2800
@@ -1607,13 +1576,6 @@ Wire Wire Line
 Connection ~ 1500 2800
 Wire Wire Line
 	1500 2800 1800 2800
-Wire Wire Line
-	1950 1600 1950 1450
-Wire Wire Line
-	1950 1450 2050 1450
-Connection ~ 1950 1600
-Wire Wire Line
-	1950 1600 2350 1600
 Wire Notes Line
 	2600 3250 600  3250
 Wire Notes Line
@@ -1705,11 +1667,8 @@ Wire Notes Line
 	4150 5500 600  5500
 Wire Notes Line
 	600  3300 600  5500
-Wire Wire Line
-	9800 5800 10050 5800
-Text GLabel 10050 5800 2    50   Input ~ 0
+Text GLabel 10550 5800 2    50   Input ~ 0
 Bat
-Connection ~ 9800 5800
 $Comp
 L Amplifier_Operational:LM358 U4
 U 1 1 63C0F67A
@@ -1724,12 +1683,12 @@ $EndComp
 $Comp
 L Amplifier_Operational:LM358 U4
 U 2 1 63C13767
-P 3500 -2900
-F 0 "U4" H 3600 -3050 50  0000 C CNN
-F 1 "LM358" H 3450 -2900 50  0000 C CNN
-F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 3500 -2900 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/lm2904-n.pdf" H 3500 -2900 50  0001 C CNN
-	2    3500 -2900
+P 4250 -2900
+F 0 "U4" H 4350 -3050 50  0000 C CNN
+F 1 "LM358" H 4200 -2900 50  0000 C CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 4250 -2900 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm2904-n.pdf" H 4250 -2900 50  0001 C CNN
+	2    4250 -2900
 	1    0    0    1   
 $EndComp
 Wire Wire Line
@@ -1755,12 +1714,7 @@ F 3 "http://www.ti.com/lit/ds/symlink/lm2904-n.pdf" H 1500 -4400 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	1200 -4300 1100 -4300
-Text GLabel 2000 -2900 2    50   Input ~ 0
-pH-
-Wire Wire Line
-	2000 -2900 1850 -2900
-Connection ~ 1850 -2900
-Text GLabel 4050 -2900 2    50   Input ~ 0
+Text GLabel 4800 -2900 2    50   Input ~ 0
 ORP-
 Text GLabel 1000 -4500 0    50   Input ~ 0
 pH+
@@ -1819,39 +1773,39 @@ Wire Wire Line
 	1000 -2800 1150 -2800
 Connection ~ 1000 -2800
 Wire Wire Line
-	3200 -3000 3000 -3000
+	3950 -3000 3750 -3000
 Wire Wire Line
-	3000 -3000 3000 -3200
+	3750 -3000 3750 -3200
 Wire Wire Line
-	3000 -3200 3900 -3200
+	3750 -3200 4650 -3200
 Wire Wire Line
-	3900 -3200 3900 -2900
+	4650 -3200 4650 -2900
 Wire Wire Line
-	3900 -2900 3800 -2900
+	4650 -2900 4550 -2900
 Wire Wire Line
-	4050 -2900 3900 -2900
-Connection ~ 3900 -2900
+	4800 -2900 4650 -2900
+Connection ~ 4650 -2900
 $Comp
 L Device:R_Small R19
 U 1 1 63F4CDE3
-P 2800 -2800
-F 0 "R19" V 2604 -2800 50  0000 C CNN
-F 1 "50K" V 2695 -2800 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 2800 -2800 50  0001 C CNN
-F 3 "~" H 2800 -2800 50  0001 C CNN
-	1    2800 -2800
+P 3550 -2800
+F 0 "R19" V 3354 -2800 50  0000 C CNN
+F 1 "50K" V 3445 -2800 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 3550 -2800 50  0001 C CNN
+F 3 "~" H 3550 -2800 50  0001 C CNN
+	1    3550 -2800
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	2550 -2800 2700 -2800
+	3300 -2800 3450 -2800
 Wire Wire Line
-	3050 -2800 3050 -2700
+	3800 -2800 3800 -2700
 Wire Wire Line
-	2900 -2800 3050 -2800
+	3650 -2800 3800 -2800
 Wire Wire Line
-	3050 -2800 3200 -2800
-Connection ~ 3050 -2800
-Text GLabel 3300 -2450 2    50   Input ~ 0
+	3800 -2800 3950 -2800
+Connection ~ 3800 -2800
+Text GLabel 4050 -2450 2    50   Input ~ 0
 GND
 $Comp
 L Amplifier_Operational:LM358 U6
@@ -1877,22 +1831,22 @@ Wire Wire Line
 $Comp
 L Amplifier_Operational:LM358 U5
 U 3 1 64149620
-P 2350 -4700
-F 0 "U5" V 2025 -4700 50  0000 C CNN
-F 1 "TLC272" V 2116 -4700 50  0000 C CNN
-F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 2350 -4700 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/lm2904-n.pdf" H 2350 -4700 50  0001 C CNN
-	3    2350 -4700
+P 2300 -5300
+F 0 "U5" V 1975 -5300 50  0000 C CNN
+F 1 "TLC272" V 2066 -5300 50  0000 C CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 2300 -5300 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm2904-n.pdf" H 2300 -5300 50  0001 C CNN
+	3    2300 -5300
 	0    1    1    0   
 $EndComp
-Text GLabel 1950 -4800 0    50   Input ~ 0
+Text GLabel 1900 -5400 0    50   Input ~ 0
 GND
 Wire Wire Line
-	1950 -4800 2050 -4800
-Text GLabel 2750 -4800 2    50   Input ~ 0
+	1900 -5400 2000 -5400
+Text GLabel 2700 -5400 2    50   Input ~ 0
 Vcc
 Wire Wire Line
-	2650 -4800 2750 -4800
+	2600 -5400 2700 -5400
 $Comp
 L Amplifier_Operational:LM358 U4
 U 3 1 641719A2
@@ -1913,31 +1867,29 @@ Vcc
 Wire Wire Line
 	2650 -3500 2750 -3500
 Wire Wire Line
-	2700 -4450 2950 -4450
-Text GLabel 2700 -4450 0    50   Input ~ 0
+	3600 -4450 3850 -4450
+Text GLabel 3600 -4450 0    50   Input ~ 0
 ORP+
 Wire Wire Line
-	3650 -4350 3550 -4350
+	4550 -4050 4550 -4350
 Wire Wire Line
-	3650 -4050 3650 -4350
+	3600 -4050 4550 -4050
 Wire Wire Line
-	2700 -4050 3650 -4050
+	3600 -4250 3600 -4050
 Wire Wire Line
-	2700 -4250 2700 -4050
-Wire Wire Line
-	2950 -4250 2700 -4250
+	3850 -4250 3600 -4250
 $Comp
 L Amplifier_Operational:LM358 U5
 U 2 1 63C5642B
-P 3250 -4350
-F 0 "U5" H 3350 -4200 50  0000 C CNN
-F 1 "TLC272" H 3200 -4350 50  0000 C CNN
-F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 3250 -4350 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/lm2904-n.pdf" H 3250 -4350 50  0001 C CNN
-	2    3250 -4350
+P 4150 -4350
+F 0 "U5" H 4250 -4200 50  0000 C CNN
+F 1 "TLC272" H 4100 -4350 50  0000 C CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 4150 -4350 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm2904-n.pdf" H 4150 -4350 50  0001 C CNN
+	2    4150 -4350
 	1    0    0    -1  
 $EndComp
-Text GLabel 2550 -2800 0    50   Input ~ 0
+Text GLabel 3300 -2800 0    50   Input ~ 0
 Vcc
 Text GLabel 500  -2800 0    50   Input ~ 0
 Vcc
@@ -1970,29 +1922,12 @@ Wire Wire Line
 	2050 -1600 2050 -1650
 Wire Wire Line
 	1900 -1600 2050 -1600
-Text GLabel 3750 -4350 2    50   Input ~ 0
+Text GLabel 4800 -4350 2    50   Input ~ 0
 Cl
 Wire Wire Line
-	3750 -4350 3650 -4350
-Connection ~ 3650 -4350
-Wire Wire Line
 	1900 -4400 1800 -4400
-Text GLabel 2000 -4400 2    50   Input ~ 0
+Text GLabel 2100 -4400 2    50   Input ~ 0
 pH
-Wire Wire Line
-	2000 -4400 1900 -4400
-Connection ~ 1900 -4400
-$Comp
-L Amplifier_Operational:LM358 U6
-U 1 1 646F302D
-P 7750 -2100
-F 0 "U6" H 7850 -2250 50  0000 C CNN
-F 1 "LM358" H 7700 -2100 50  0000 C CNN
-F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 7750 -2100 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/lm2904-n.pdf" H 7750 -2100 50  0001 C CNN
-	1    7750 -2100
-	1    0    0    1   
-$EndComp
 Wire Wire Line
 	7450 -2200 7350 -2200
 Wire Wire Line
@@ -2001,13 +1936,8 @@ Wire Wire Line
 	7350 -2450 7650 -2450
 Wire Wire Line
 	8150 -2450 8150 -2100
-Wire Wire Line
-	8150 -2100 8050 -2100
-Text GLabel 8250 -2100 2    50   Input ~ 0
+Text GLabel 8350 -2100 2    50   Input ~ 0
 Temp
-Wire Wire Line
-	8150 -2100 8250 -2100
-Connection ~ 8150 -2100
 Wire Wire Line
 	6600 -2250 6600 -2000
 Wire Wire Line
@@ -2114,8 +2044,6 @@ $EndComp
 Wire Wire Line
 	1100 -4100 1550 -4100
 Wire Wire Line
-	1900 -4400 1900 -4100
-Wire Wire Line
 	1750 -4100 1900 -4100
 Connection ~ 1100 -4100
 $Comp
@@ -2136,18 +2064,18 @@ Wire Wire Line
 $Comp
 L Device:R_Small R26
 U 1 1 634276EF
-P 3050 -2600
-F 0 "R26" H 3109 -2554 50  0000 L CNN
-F 1 "R_Small" H 3109 -2645 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 3050 -2600 50  0001 C CNN
-F 3 "~" H 3050 -2600 50  0001 C CNN
-	1    3050 -2600
+P 3800 -2600
+F 0 "R26" H 3859 -2554 50  0000 L CNN
+F 1 "R_Small" H 3859 -2645 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 3800 -2600 50  0001 C CNN
+F 3 "~" H 3800 -2600 50  0001 C CNN
+	1    3800 -2600
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3050 -2450 3050 -2500
+	3800 -2450 3800 -2500
 Wire Wire Line
-	3050 -2450 3300 -2450
+	3800 -2450 4050 -2450
 $Comp
 L Device:Thermistor_NTC TH2
 U 1 1 649D7FF2
@@ -2157,25 +2085,6 @@ F 1 "NTC2" H 6697 -2445 50  0000 L CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 6600 -2350 50  0001 C CNN
 F 3 "~" H 6600 -2350 50  0001 C CNN
 	1    6600 -2400
-	1    0    0    -1  
-$EndComp
-$Comp
-L KF33BDT-TR:KF33BD-TR IC1
-U 1 1 634EBE3E
-P 5000 6600
-F 0 "IC1" H 5000 6965 50  0000 C CNN
-F 1 "KF33BD-TR" H 5000 6874 50  0000 C CNN
-F 2 "Package_SO:SO-8_3.9x4.9mm_P1.27mm" H 6250 6700 50  0001 L CNN
-F 3 "http://www.st.com/web/en/resource/technical/document/datasheet/CD00000970.pdf" H 6250 6600 50  0001 L CNN
-F 4 "LDO Regulator, 3.3V, 0.5A, DPAK KF33BDT-TR, Low Dropout Voltage Regulator, 0.5A, 3.3 V +/-2%, 2.5  20 Vin, 3-Pin DPAK" H 6250 6500 50  0001 L CNN "Description"
-F 5 "2.4" H 6250 6400 50  0001 L CNN "Height"
-F 6 "STMicroelectronics" H 6250 6300 50  0001 L CNN "Manufacturer_Name"
-F 7 "KF33BDT-TR" H 6250 6200 50  0001 L CNN "Manufacturer_Part_Number"
-F 8 "511-KF33BDT-TR" H 6250 6100 50  0001 L CNN "Mouser Part Number"
-F 9 "https://www.mouser.co.uk/ProductDetail/STMicroelectronics/KF33BDT-TR?qs=CDLU63GnlgVFO8GvG6iBTQ%3D%3D" H 6250 6000 50  0001 L CNN "Mouser Price/Stock"
-F 10 "KF33BDT-TR" H 6250 5900 50  0001 L CNN "Arrow Part Number"
-F 11 "https://www.arrow.com/en/products/kf33bdt-tr/stmicroelectronics?region=nac" H 6250 5800 50  0001 L CNN "Arrow Price/Stock"
-	1    5000 6600
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -2199,7 +2108,7 @@ Connection ~ 5150 7100
 Wire Wire Line
 	5150 7100 5050 7100
 $Comp
-L USB_C_Receptacle_2.0:USB_C_Receptacle_2.0 J1
+L esp32-rescue:USB_C_Receptacle_2.0-USB_C_Receptacle_2.0 J1
 U 1 1 63686CC8
 P 1150 1850
 F 0 "J1" H 1150 2750 50  0000 C CNN
@@ -2260,4 +2169,178 @@ Wire Wire Line
 Wire Wire Line
 	1050 4700 1250 4700
 Connection ~ 1250 4700
+$Comp
+L esp32-rescue:KF33BD-TR-KF33BDT-TR IC1
+U 1 1 63375022
+P 5000 6600
+F 0 "IC1" H 5000 6965 50  0000 C CNN
+F 1 "KF33BD-TR" H 5000 6874 50  0000 C CNN
+F 2 "Package_SO:SO-8_3.9x4.9mm_P1.27mm" H 6250 6700 50  0001 L CNN
+F 3 "http://www.st.com/web/en/resource/technical/document/datasheet/CD00000970.pdf" H 6250 6600 50  0001 L CNN
+F 4 "LDO Regulator, 3.3V, 0.5A, DPAK KF33BDT-TR, Low Dropout Voltage Regulator, 0.5A, 3.3 V +/-2%, 2.5  20 Vin, 3-Pin DPAK" H 6250 6500 50  0001 L CNN "Description"
+F 5 "2.4" H 6250 6400 50  0001 L CNN "Height"
+F 6 "STMicroelectronics" H 6250 6300 50  0001 L CNN "Manufacturer_Name"
+F 7 "KF33BDT-TR" H 6250 6200 50  0001 L CNN "Manufacturer_Part_Number"
+F 8 "511-KF33BDT-TR" H 6250 6100 50  0001 L CNN "Mouser Part Number"
+F 9 "https://www.mouser.co.uk/ProductDetail/STMicroelectronics/KF33BDT-TR?qs=CDLU63GnlgVFO8GvG6iBTQ%3D%3D" H 6250 6000 50  0001 L CNN "Mouser Price/Stock"
+F 10 "KF33BDT-TR" H 6250 5900 50  0001 L CNN "Arrow Part Number"
+F 11 "https://www.arrow.com/en/products/kf33bdt-tr/stmicroelectronics?region=nac" H 6250 5800 50  0001 L CNN "Arrow Price/Stock"
+	1    5000 6600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1800 1550 1800 1600
+$Comp
+L Device:Jumper_NO_Small JP6
+U 1 1 633A00B9
+P 2050 1600
+F 0 "JP6" V 2100 1800 50  0000 R CNN
+F 1 "Jumper_NO" V 2000 2050 50  0000 R CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Vertical" H 2050 1600 50  0001 C CNN
+F 3 "~" H 2050 1600 50  0001 C CNN
+	1    2050 1600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2350 1600 2250 1600
+Wire Wire Line
+	1950 1600 1800 1600
+Connection ~ 1800 1600
+Wire Wire Line
+	1800 1600 1800 1650
+Wire Wire Line
+	2250 1600 2250 1400
+Wire Wire Line
+	2250 1400 2300 1400
+Connection ~ 2250 1600
+Wire Wire Line
+	2250 1600 2150 1600
+Connection ~ 1850 -2900
+Wire Wire Line
+	2000 -2900 1850 -2900
+Text GLabel 2000 -2900 2    50   Input ~ 0
+pH-
+Wire Wire Line
+	1900 -4400 1900 -4100
+Wire Wire Line
+	10550 5800 10400 5800
+$Comp
+L Device:Jumper_NO_Small JP13
+U 1 1 6395071D
+P 10300 5800
+F 0 "JP13" V 10350 6000 50  0000 R CNN
+F 1 "Jumper_NO" V 10250 6250 50  0000 R CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Vertical" H 10300 5800 50  0001 C CNN
+F 3 "~" H 10300 5800 50  0001 C CNN
+	1    10300 5800
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	10200 5800 9800 5800
+Connection ~ 9800 5800
+Wire Wire Line
+	6550 2950 6550 3150
+$Comp
+L Device:Jumper_NO_Small JP11
+U 1 1 639E7431
+P 6550 3250
+F 0 "JP11" V 6600 3450 50  0000 R CNN
+F 1 "Jumper_NO" V 6500 3700 50  0000 R CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Vertical" H 6550 3250 50  0001 C CNN
+F 3 "~" H 6550 3250 50  0001 C CNN
+	1    6550 3250
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6550 3450 6550 3350
+Wire Wire Line
+	6550 3450 7000 3450
+$Comp
+L Device:Jumper_NO_Small JP9
+U 1 1 63A4E6EB
+P 5200 4000
+F 0 "JP9" V 5246 3952 50  0000 R CNN
+F 1 "Jumper_NO" V 5155 3952 50  0000 R CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Vertical" H 5200 4000 50  0001 C CNN
+F 3 "~" H 5200 4000 50  0001 C CNN
+	1    5200 4000
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5200 4250 5200 4100
+$Comp
+L Device:Jumper_NO_Small JP10
+U 1 1 63AB9258
+P 5200 4850
+F 0 "JP10" V 5246 4802 50  0000 R CNN
+F 1 "Jumper_NO" V 5155 4802 50  0000 R CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Vertical" H 5200 4850 50  0001 C CNN
+F 3 "~" H 5200 4850 50  0001 C CNN
+	1    5200 4850
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5200 5100 5200 4950
+Text GLabel 6000 4250 2    50   Input ~ 0
+28
+Wire Wire Line
+	5200 4250 6000 4250
+Text GLabel 6000 5100 2    50   Input ~ 0
+29
+Wire Wire Line
+	5200 5100 6000 5100
+Text GLabel 5200 3700 1    50   Input ~ 0
+GND
+Wire Wire Line
+	5200 3700 5200 3900
+Text GLabel 5200 4550 1    50   Input ~ 0
+GND
+Wire Wire Line
+	5200 4550 5200 4750
+Wire Wire Line
+	2100 -4400 1900 -4400
+Connection ~ 1900 -4400
+Wire Wire Line
+	4450 -4350 4550 -4350
+Connection ~ 4550 -4350
+Wire Wire Line
+	4550 -4350 4800 -4350
+$Comp
+L Amplifier_Operational:LM358 U6
+U 1 1 646F302D
+P 7750 -2100
+F 0 "U6" H 7850 -2250 50  0000 C CNN
+F 1 "LM358" H 7700 -2100 50  0000 C CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 7750 -2100 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm2904-n.pdf" H 7750 -2100 50  0001 C CNN
+	1    7750 -2100
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	8350 -2100 8150 -2100
+Connection ~ 8150 -2100
+Wire Wire Line
+	8150 -2100 8050 -2100
+$Comp
+L Device:R_Small R2
+U 1 1 633D7D2B
+P 2100 2600
+F 0 "R2" H 2159 2646 50  0000 L CNN
+F 1 "5.1k" H 2159 2555 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 2100 2600 50  0001 C CNN
+F 3 "~" H 2100 2600 50  0001 C CNN
+	1    2100 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R1
+U 1 1 633A5CF5
+P 1800 2600
+F 0 "R1" H 1859 2646 50  0000 L CNN
+F 1 "5.1k" H 1859 2555 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 1800 2600 50  0001 C CNN
+F 3 "~" H 1800 2600 50  0001 C CNN
+	1    1800 2600
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

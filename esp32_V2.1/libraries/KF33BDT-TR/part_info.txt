@@ -1,9 +1,0 @@
-Manufacturer=STMicroelectronics
-PartNumber=KF33BDT-TR
-PartCategory=Integrated Circuit
-PackageCategory=TO-XXX (Inc. DPAK)
-PinCount=3
-Version=1.1
-Released=2015-07-12 18:13:02
-Downloaded=2022-05-26 02:00:49
-3D=N
